@@ -1,0 +1,226 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: 0.3s ease;
+
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background:
+        linear-gradient(to right, rgba(70, 44, 125, 0.8),
+            rgba(131, 28, 145, 0.8), rgba(213, 82, 163, 0.8),
+            rgba(255, 112, 191, 0.8)),
+        url("../images/The\ Best\ Background\ Images\ for\ Any\ Project.jpeg") no-repeat;
+    background-size: cover;
+}
+
+::selection {
+    color: white;
+    background-color: #D552A3;
+}
+
+@media (max-width: 567px) {
+    header {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: column; 
+        justify-content: space-between; 
+        padding: 10px; 
+    }
+
+    header h1 {
+        font-size: 20px;
+        /* margin-bottom: 5px; */
+    }
+
+    #links {
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: flex-end;
+        /* gap: 10px; */
+        list-style: none;
+        padding: 0;
+    }
+
+    #links li a {
+        /* padding: 8px 12px;  */
+        font-size: 13px;
+        display: inline-block;
+        border-radius: 10px;
+    }
+
+    form {
+        width: 90%;
+        max-width: 320px;
+        padding: 25px 20px;
+    }
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    background-color: #462C7D;
+    color: white;
+    padding: 15px 60px;
+    box-shadow: 2px 2px 50px 5px black;
+    background: rgba(131, 28, 145, 0.3);
+
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container li {
+    list-style: none;
+}
+
+.container a:not(h1 a, #logout a) {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.container li a:hover {
+    color: #FF70BF;
+}
+
+#links {
+    display: flex;
+    gap: 20px;
+}
+
+#links li a {
+    border: 1px solid #FF70BF;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#links li a:hover {
+    background-color: #FF70BF;
+    box-shadow: 1px 1px 10px 1px black;
+}
+
+section {
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 350px;
+    height: 400px;
+    text-align: center;
+    box-shadow: 2px 2px 50px 5px black;
+    background: rgba(131, 28, 145, 0.3);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.home_page {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+form .fa-user {
+    color: white;
+    font-size: 60px;
+}
+
+#user {
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+form h2 {
+    font-size: 30px;
+    color: white;
+    letter-spacing: 3px;
+}
+
+input {
+    outline: none;
+    border-radius: 20px;
+    border: 0;
+    font-size: 15px;
+    color: #462C7D;
+    font-weight: bold;
+}
+
+input:not(#signUp, #signIn) {
+    width: 250px;
+    padding: 13px 10px;
+    border: 1px solid white;
+}
+
+input:focus:not(#signUp, #signIn) {
+    border: 1px solid #462C7D;
+}
+
+#signUp,
+#signIn {
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #D552A3;
+    box-shadow: 5px 5px 10px 10px #D552A3 inset;
+    color: white;
+}
+
+#signUp:hover,
+#signIn:hover {
+    background-color: #FF70BF;
+    box-shadow: 1px 1px 10px 1px black;
+    color: white;
+}
+
+#logout {
+    font-size: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+#userInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.fa-arrow-right-from-bracket {
+    margin: 0 10px;
+    color: #462C7D;
+}
+
+#logout:hover .fa-arrow-right-from-bracket {
+    color: white;
+}
+
+#logout a {
+    text-decoration: none;
+    color: #462C7D;
+    font-size: 16px;
+}
+
+#logout:hover a {
+    color: white;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="shopping">
+                <h1>Shopping Cart</h1>
+            </div> <!-- shopping -->
+            <div>
+                <ul id="links">
+                    <li><a href="login.html">Sign In</a></li>
+                    <li><a href="register.html">Sign Up</a></li>
+                </ul>
+                <ul id="userInfo" style="display: none;">
+                    <li id="user"></li>
+                    <li id="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i>LogOut</li>
+
+                </ul>
+            </div>
+
+        </div> <!-- container -->
+    </header>
+
+    <section id="login_form">
+        <form autocomplete="off">
+            <i class="fa-solid fa-user"></i>
+            <h2>Login Form</h2>
+            <input type="text" placeholder="Enter Your Name" id="userName">
+            <input type="password" placeholder="Enter Your Password" id="password">
+            <input type="submit" value="Sign In" id="signIn">
+
+        </form>
+
+    </section>
+
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>
