@@ -17,7 +17,7 @@ signUpBtn.addEventListener("click", function (e) {
 
     let pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
-    if (userName.value.trim() === "" || email.value.trim() === "" || password.value.trim() === "") {
+    if (userName.value === "" || email.value === "" || password.value === "") {
         alert("please , fill data")
     }
     else if (!namePattern.test(userName.value)) {
@@ -34,10 +34,11 @@ signUpBtn.addEventListener("click", function (e) {
 
         })
         if (userFound) {
-            alert("This Email is already registered!")
+            alert("This Email is already registered !")
 
             setTimeout(() => {
-                location = "index.html"
+                
+                location = "login.html"
                 form.reset()
 
             }, 1000)
@@ -45,9 +46,9 @@ signUpBtn.addEventListener("click", function (e) {
         }
         else {
             let newUser = {
-                name: userName.value,
-                email: email.value,
-                password: password.value
+                name: userName.value.replace(/\s+/g,""),
+                email: email.value.replace(/\s+/g,""),
+                password: password.value.replace(/\s+/g,"")
             }
 
             allUsers.push(newUser)
@@ -64,7 +65,3 @@ signUpBtn.addEventListener("click", function (e) {
     }
 
 })
-
-// signIn.addEventListener("click", () => {
-//     form.reset()
-// })

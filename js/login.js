@@ -22,7 +22,7 @@ signInBtn.addEventListener("click", function (e) {
 
         })
         if (userFound) {
-            localStorage.setItem("userName", JSON.stringify(userFound.name))
+            localStorage.setItem("userName", userFound.name)
             setTimeout(() => {
                 location = "index.html"
                 // form.reset()

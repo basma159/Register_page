@@ -7,26 +7,29 @@
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/all.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <header>
-        <div class="container">
-            <div class="shopping">
-                <h1>Shopping Cart</h1>
+<body
+    class="h-[1000px] bg-cover bg-[linear-gradient(135deg,rgba(70,44,125,0.8),rgba(131,28,145,0.8),rgba(213,82,163,0.8),rgba(255,112,191,0.8)),url('/images/2.jpeg')]">
+
+    <header
+        class="w-full h-20 px-10 md:px-20 fixed backdrop-blur-md bg-[#831C91]/30 shadow-2xl shadow-black/50 flex flex-row justify-center md:justify-between md:items-center">
+        <div class="container w-full  flex flex-row justify-between items-center">
+            <div class="shopping  flex justify-start items-center">
+                <h1 class="text-white text-3xl font-extrabold">Shopping Cart</h1>
             </div> <!-- shopping -->
 
             <div>
-                <ul id="links">
-                    <li><a href="login.html" class="Sign In">Sign In</a></li>
-                    <li><a href="register.html" class="Sign Up">Sign Up</a></li>
+                <ul id="links" class="flex md:flex-row items-end md:items-center md:justify-center gap-4 md:gap-8 flex-wrap">
+                    <li class="list-none"><a href="login.html" class="text-white text-xl font-extrabold rounded-3xl p-3 ring-1
+                         ring-[#FF70BF] hover:bg-[#FF70BF] hover:shadow-xl hover:shadow-black/30"">Sign In</a></li>
+                    <li><a href=" register.html" class="text-white text-xl font-extrabold rounded-3xl p-3 ring-1
+                         ring-[#FF70BF] hover:bg-[#FF70BF] hover:shadow-xl hover:shadow-black/30">Sign Up</a></li>
                 </ul>
                 <ul id="userInfo" style="display: none;">
-                    <li id="user"></li>
-                    <li id="logout"><a href="register.html"><i class="fa-solid fa-arrow-right-from-bracket">
-
-                    </i>LogOut</a>
-                    </li>
+                    <li id="user" class="text-white capitalize text-xl font-extrabold"></li>
+                    <li id="logout" class="text-[#FF70BF] text-xl font-extrabold flex justify-center items-center gap-2 cursor-pointer hover:text-white"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout </li>
 
                 </ul>
             </div>
@@ -34,9 +37,14 @@
         </div> <!-- container -->
     </header>
 
-    <section class="home">
-        <form>
-            <h2 class="home_page"><i class="fa-solid fa-house-user"></i>Welcome to Home Page</h2>
+    <section class="home w-full min-h-screen flex justify-center items-center">
+
+        <form
+            class="w-96 h-96 rounded-3xl bg-[#831C91]/30 backdrop-blur-sm shadow-2xl shadow-black flex flex-col justify-center items-center gap-6 ring-1 ring-white/20">
+
+            <h2 class="home_page font-bold text-white text-3xl flex flex-col justify-center items-center gap-2">
+                <i class="fa-solid fa-house-user "></i>Welcome to Home Page
+            </h2>
 
         </form>
     </section>

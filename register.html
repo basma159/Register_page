@@ -7,19 +7,26 @@
     <title>Resigster Page</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/all.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 
-<body>
-    <header>
-        <div class="container">
+<body
+    class="h-[1000px] bg-cover bg-[linear-gradient(135deg,rgba(70,44,125,0.8),rgba(131,28,145,0.8),rgba(213,82,163,0.8),rgba(255,112,191,0.8)),url('/images/2.jpeg')]">
+    <header
+        class="w-full h-20 px-10 md:px-20 fixed backdrop-blur-md bg-[#831C91]/30 shadow-2xl shadow-black/50 flex flex-row justify-center md:justify-between md:items-center">
+
+        <div class="container w-full  flex flex-row justify-between items-center">
             <div class="shopping">
-                <h1>Shopping Cart</h1>
+                <h1 class="text-white text-3xl font-extrabold">Shopping Cart</h1>
             </div> <!-- shopping -->
 
             <div>
-                <ul id="links">
-                    <li><a href="login.html">Sign In</a></li>
-                    <li><a href="register.html">Sign Up</a></li>
+                <ul id="links" class="flex md:flex-row items-end md:items-center md:justify-center gap-4 md:gap-8 flex-wrap">
+                    <li><a href="login.html" class="text-white text-xl font-extrabold rounded-3xl p-3 ring-1
+                         ring-[#FF70BF] hover:bg-[#FF70BF] hover:shadow-xl hover:shadow-black/30">Sign In</a></li>
+                    <li><a href="register.html" class="text-white text-xl font-extrabold rounded-3xl p-3 ring-1
+                         ring-[#FF70BF] hover:bg-[#FF70BF] hover:shadow-xl hover:shadow-black/30">Sign Up</a></li>
                 </ul>
                 <ul id="userInfo" style="display: none;">
                     <li id="user"></li>
@@ -30,14 +37,21 @@
         </div> <!-- container -->
     </header>
 
-    <section id="register_form">
-        <form autocomplete="off">
-            <i class="fa-solid fa-user"></i>
-            <h2>Register Form</h2>
-            <input type="text" placeholder="Enter Your Name" id="userName">
-            <input type="email" placeholder="Enter Your Email" id="email">
-            <input type="password" placeholder="Enter Your Password" id="password">
-            <input type="submit" value="Sign Up" id="signUp">
+    <section id="register_form" class="home w-full min-h-screen flex justify-center items-center">
+
+        <form
+            class="w-96 h-fit rounded-3xl py-6 bg-[#831C91]/30 backdrop-blur-sm shadow-2xl shadow-black flex flex-col justify-center items-center gap-6 ring-1 ring-white/20">
+            <i class="fa-solid fa-user text-6xl text-white"></i>
+            
+            <h2 class="text-3xl text-white tracking-widest font-bold">Register Form</h2>
+            <input type="text" placeholder="Enter Your Name" id="userName"
+                class="w-72 h-9 outline-none rounded-xl p-2 text-lg text-[#831C91]">
+            <input type="email" placeholder="Enter Your Email" id="email"
+                class="w-72 h-9 outline-none rounded-xl p-2 text-lg text-[#831C91]">
+            <input type="password" placeholder="Enter Your Password" id="password"
+                class="w-72 h-9 outline-none rounded-xl p-2 text-lg text-[#831C91]">
+            <input type="submit" value="Sign Up" id="signUp"
+                class="text-xl font-extrabold  text-white bg-[#FF70BF] rounded-3xl px-4 py-3 hover:bg-[#D552A3] hover:shadow-lg hover:shadow-black/20 cursor-pointer">
 
         </form>
 
