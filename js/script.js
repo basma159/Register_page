@@ -1,22 +1,36 @@
 
 
-let links = document.querySelector("#links")
-let user = document.querySelector("#user")
-let logoutBtn = document.querySelector("#logout")
-let userInfo = document.querySelector("#userInfo")
-
-let loggedUser = localStorage.getItem("userName")
+let links = document.querySelectorAll(".links");
+let user = document.querySelectorAll(".user");
+let logoutBtn = document.querySelectorAll(".logout");
+let userInfo = document.querySelectorAll(".userInfo");
+let loggedUser = localStorage.getItem("userName");
 
 if (loggedUser) {
-    links.remove()
-    userInfo.style.display = "block"
-    user.innerHTML = '<i class="fa-regular fa-user"></i> ' + "Hello  " + loggedUser 
 
-    logoutBtn.addEventListener("click", function () {
-        localStorage.removeItem("userName")
-        setTimeout(() => {
-            location = ("login.html")
-        }, 1000)
-    })
+    // إخفاء links
+    links.forEach(link => {
+        link.style.display = "none";
+    });
+
+    // إظهار userInfo
+    userInfo.forEach(el => {
+        el.style.display = "block";
+    });
+
+    // كتابة اسم المستخدم
+    user.forEach(el => {
+        el.innerHTML = `<i class="fa-regular fa-user"></i> Hello ${loggedUser}`;
+    });
+
+    // logout
+    logoutBtn.forEach(btn => {
+        btn.addEventListener("click", function () {
+            localStorage.removeItem("userName");
+
+            setTimeout(() => {
+                location.href = "login.html";
+            }, 1000);
+        });
+    });
 }
-

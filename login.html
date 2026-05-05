@@ -12,29 +12,70 @@
 </head>
 
 <body
-    class="h-[1000px] bg-cover bg-[linear-gradient(135deg,rgba(70,44,125,0.8),rgba(131,28,145,0.8),rgba(213,82,163,0.8),rgba(255,112,191,0.8)),url('/images/2.jpeg')]">
+    class="selection:bg-[#FF70BF] selection:text-white bg-cover bg-[linear-gradient(135deg,rgba(70,44,125,0.8),rgba(131,28,145,0.8),rgba(213,82,163,0.8),rgba(255,112,191,0.8)),url('/images/2.jpeg')]">
     <header
-        class="w-full h-20 px-10 md:px-20 fixed backdrop-blur-md bg-[#831C91]/30 shadow-2xl shadow-black/50 flex flex-row justify-center md:justify-between md:items-center">
+        class="w-full h-20 px-10 md:px-20 fixed z-10 backdrop-blur-md bg-[#831C91]/30 shadow-2xl shadow-black/50 flex flex-row justify-center md:justify-between md:items-center">
 
-        <div class="container w-full  flex flex-row justify-between items-center">
+        <div class="container w-full flex flex-row justify-between items-center">
             <div class="shopping">
-                <h1 class="text-white text-3xl font-extrabold">Shopping Cart</h1>
+                <h1 class="text-white text-xl md:text-3xl font-extrabold">Shopping Cart</h1>
             </div> <!-- shopping -->
-            <div>
-                <ul id="links" class="flex md:flex-row items-end md:items-center md:justify-center gap-4 md:gap-8 flex-wrap">
+
+            <div class="menu-mobile relative md:hidden flex flex-col items-center justify-center gap-8 ">
+                <i class="fa-solid fa-bars text-3xl text-white cursor-pointer"></i>
+
+                <div class="menu w-48 py-10 hidden top-full -right-4 mt-8 absolute z-50
+                 bg-[linear-gradient(135deg,rgba(70,44,125,0.8),rgba(131,28,145,0.8),rgba(213,82,163,0.8),rgba(255,112,191,0.8))]
+                ring-1 ring-white/20 rounded-3xl backdrop-blur-md shadow-lg shadow-black/30">
+
+                    <ul class="links flex flex-col items-center justify-center gap-10 py-4 ">
+                        <li><a href="login.html" class="text-white text-xl font-extrabold rounded-3xl p-3 ring-1
+                         ring-[#FF70BF] hover:bg-[#FF70BF] hover:shadow-xl hover:shadow-black/30">Sign In</a></li>
+                        <li><a href="register.html" class="text-white text-xl font-extrabold rounded-3xl p-3 ring-1
+                         ring-[#FF70BF] hover:bg-[#FF70BF] hover:shadow-xl hover:shadow-black/30">Sign Up</a></li>
+                    </ul>
+                    <ul class="userInfo  flex flex-col items-center justify-center gap-10 py-4 " style="display: none;">
+                        <li class="user"></li>
+                        <li class="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i>LogOut</li>
+
+                    </ul>
+                </div>
+                <script>
+                    let mobileBtn = document.querySelector(".fa-bars")
+                    let menu = document.querySelector(".menu")
+
+                    mobileBtn.addEventListener("click", function () {
+                        menu.classList.toggle("hidden")
+
+                        if (menu.classList.contains("hidden")) {
+                            mobileBtn.classList.add("fa-bars")
+                            mobileBtn.classList.remove("fa-xmark")
+
+                        }
+                        else {
+                            mobileBtn.classList.add("fa-xmark")
+                            mobileBtn.classList.remove("fa-bars")
+                        }
+                    })
+                </script>
+
+            </div><!-- menu-mobile -->
+
+            <div class="hidden md:block">
+                <ul class="links flex md:flex-row items-center justify-center gap-8 flex-wrap">
                     <li><a href="login.html" class="text-white text-xl font-extrabold rounded-3xl p-3 ring-1
                          ring-[#FF70BF] hover:bg-[#FF70BF] hover:shadow-xl hover:shadow-black/30">Sign In</a></li>
                     <li><a href="register.html" class="text-white text-xl font-extrabold rounded-3xl p-3 ring-1
                          ring-[#FF70BF] hover:bg-[#FF70BF] hover:shadow-xl hover:shadow-black/30">Sign Up</a></li>
                 </ul>
-                <ul id="userInfo" style="display: none;">
-                    <li id="user"></li>
-                    <li id="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i>LogOut</li>
+                <ul class="userInfo" style="display: none;">
+                    <li class="user"></li>
+                    <li class="logout"><i class="fa-solid fa-arrow-right-from-bracket"></i>LogOut</li>
 
                 </ul>
             </div>
-
         </div> <!-- container -->
+
     </header>
 
     <section id="login_form" class="home w-full min-h-screen flex justify-center items-center">
